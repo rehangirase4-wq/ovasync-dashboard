@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OvaSync Medical Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <div>
+    <h1>OvaSync</h1>
+    <p class="subtitle">
+      AI Health Monitoring
+    </p>
+  </div>
+
+  <div class="status">
+
+    <span id="btStatus">
+      🔴 Disconnected
+    </span>
+
+    <button onclick="connectBluetooth()">
+      Connect
+    </button>
+
+  </div>
+
+</header>
+
+<!-- LIVE MONITORING -->
+
+<section class="card">
+
+  <h2>Live Monitoring</h2>
+
+  <div class="grid">
+
+    <div class="box">
+      <h3>Heart Rate</h3>
+      <p id="hr">-- bpm</p>
+    </div>
+
+    <div class="box">
+      <h3>SpO2</h3>
+      <p id="spo2">-- %</p>
+    </div>
+
+    <div class="box">
+      <h3>Temperature</h3>
+      <p id="temp">-- °C</p>
+    </div>
+
+    <div class="box">
+      <h3>Glucose</h3>
+      <p id="glucose">-- mg/dL</p>
+    </div>
+
+    <div class="box">
+      <h3>pH Sensor</h3>
+      <p id="ph">--</p>
+    </div>
+
+    <div class="box">
+      <h3>Motion</h3>
+      <p id="motion">Stable</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ECG -->
+
+<section class="card">
+
+  <h2>ECG Live</h2>
+
+  <div class="ecg-container">
+
+    <div class="ecg-line"></div>
+
+  </div>
+
+</section>
+
+<!-- DRUG DELIVERY -->
+
+<section class="card">
+
+  <h2>Drug Delivery Pump</h2>
+
+  <button class="pump-btn"
+  onclick="startPump()">
+
+    Trigger Pump
+
+  </button>
+
+</section>
+
+<!-- AI INSIGHTS -->
+
+<section class="card">
+
+  <h2>AI Insights</h2>
+
+  <button onclick="generateInsight()">
+
+    Generate Insight
+
+  </button>
+
+  <p id="insight">
+    Waiting for analysis...
+  </p>
+
+</section>
+
+<!-- FITNESS -->
+
+<section class="card">
+
+  <h2>Fitness</h2>
+
+  <div class="fitness-grid">
+
+    <div class="fit-box">
+      Yoga
+    </div>
+
+    <div class="fit-box">
+      Cardio
+    </div>
+
+    <div class="fit-box">
+      HIIT
+    </div>
+
+    <div class="fit-box">
+      Meditation
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SOS -->
+
+<section class="card">
+
+  <h2>Emergency</h2>
+
+  <button class="sos-btn">
+
+    SOS ALERT
+
+  </button>
+
+</section>
+
+<!-- BOTTOM NAV -->
+
+<nav class="bottom-nav">
+
+  <div class="nav-item">
+    Vitals
+  </div>
+
+  <div class="nav-item">
+    Analytics
+  </div>
+
+  <div class="nav-item">
+    Pump
+  </div>
+
+  <div class="nav-item">
+    Fitness
+  </div>
+
+  <div class="nav-item">
+    Profile
+  </div>
+
+</nav>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!-- PATENT REPORT -->
+
+<section class="card">
+
+  <h2>Patent Report</h2>
+
+  <div class="report-box">
+
+    <h3>
+      AI Smart Medical Patch
+    </h3>
+
+    <p>
+      This wearable patch monitors
+      human health using multiple
+      biosensors and AI analysis.
+    </p>
+
+    <ul>
+
+      <li>
+        Heart Rate Monitoring
+      </li>
+
+      <li>
+        ECG Tracking
+      </li>
+
+      <li>
+        Glucose Detection
+      </li>
+
+      <li>
+        pH Analysis
+      </li>
+
+      <li>
+        Temperature Monitoring
+      </li>
+
+      <li>
+        Motion Detection
+      </li>
+
+      <li>
+        AI Health Prediction
+      </li>
+
+      <li>
+        Automatic Drug Delivery
+      </li>
+
+      <li>
+        Bluetooth Connectivity
+      </li>
+
+    </ul>
+
+    <button onclick="downloadReport()">
+
+      Download Patent PDF
+
+    </button>
+
+  </div>
+
+</section>
+<p id="locationText">
+  Location Not Found
+</p>
+<div class="wifi-box">
+
+  <input
+  type="text"
+  id="wifiName"
+  placeholder="WiFi Name">
+
+  <input
+  type="password"
+  id="wifiPass"
+  placeholder="WiFi Password">
+
+  <button onclick="connectWiFi()">
+
+    Connect WiFi
+
+  </button>
+
+</div>
+<button onclick="downloadPatientReport()">
+
+  Download Patient Report
+
+</button>
